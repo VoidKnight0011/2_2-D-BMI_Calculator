@@ -12,7 +12,7 @@ public partial class MainPage : ContentPage
     {
         double BMI = 0;
         string units = Units.SelectedItem?.ToString();
-        
+
         if (units == null)
         {
             ErrorLabel.Text = "Please select a unit first!";
@@ -20,12 +20,17 @@ public partial class MainPage : ContentPage
             return;
         }
         ErrorLabel.IsVisible = false;
-        
+
         if (units.Contains("Imperial"))
         {
-            double heightImperial = HeightImperial.Value;
+            double heightImperial = HeightImperial.Value; // total inches
             double weightImperial = WeightImperial.Value;
-            BMI = 703 * (weightImperial / Math.Pow((heightImperial * 12), 2));
+
+            int HeightImperialFt = (int)(heightImperial / 12);
+            int HeightImperialIn = (int)(heightImperial % 12);
+            HeightImperialLabel.Text = $"{HeightImperialFt}ft. {HeightImperialIn}in.";
+
+            BMI = 703 * (weightImperial / Math.Pow(heightImperial, 2));
         }
         else if (units.Contains("Metric"))
         {
@@ -37,7 +42,7 @@ public partial class MainPage : ContentPage
         {
             BMI = -1;
         }
-        
+
         string category;
         string description;
         Color categoryColor;
@@ -66,9 +71,9 @@ public partial class MainPage : ContentPage
             description = "A BMI of 30 or above is considered obese. It is recommended to consult a healthcare provider.";
             categoryColor = Colors.Tomato;
         }
-        
-            PreResults.IsVisible = false;
-            Results.IsVisible = true;
+
+        PreResults.IsVisible = false;
+        Results.IsVisible = true;
         BMIValueLabel.Text = $"{BMI:F1}";
         BMICategoryLabel.Text = category;
         BMICategoryLabel.TextColor = categoryColor;

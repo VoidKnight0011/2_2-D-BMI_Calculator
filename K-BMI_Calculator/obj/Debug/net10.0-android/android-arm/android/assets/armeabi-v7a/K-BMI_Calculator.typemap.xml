@@ -1,4 +1,4 @@
-<api type="debug" assembly-name="K-BMI_Calculator" mvid="5daa35a9dbeb446fac44d0fd9cbf5185">
+<api type="debug" assembly-name="K-BMI_Calculator" mvid="400f0b01e006465baa637a17d7b23bb7">
   <java-to-managed>
     <entry java-name="crc64561cc79cfede871c/MainActivity" managed-name="K_BMI_Calculator.MainActivity, K-BMI_Calculator" managed-type-token-id="33554441" />
     <entry java-name="crc64561cc79cfede871c/MainApplication" managed-name="K_BMI_Calculator.MainApplication, K-BMI_Calculator" managed-type-token-id="33554442" />

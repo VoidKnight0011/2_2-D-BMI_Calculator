@@ -15,7 +15,7 @@
             <VerticalStackLayout Spacing="15">
 
                 <!-- Input Box -->
-                <Frame BackgroundColor="Gray" CornerRadius="5" Padding="5">
+                <Frame BackgroundColor="Gray" CornerRadius="5" Padding="15">
                     <VerticalStackLayout>
 
                         <Label Text="Units" />
@@ -30,14 +30,14 @@
                         <VerticalStackLayout x:Name="ImperialUnits" IsVisible="False">
                             <Grid ColumnDefinitions="*,*">
                                 <Label Text="Height" Grid.Column="0" />
-                                <Label Text="{Binding Source={x:Reference HeightImperial}, Path=Value, StringFormat='{0:F1} ft'}" Grid.Column="1" HorizontalOptions="End" />
+                                <Label x:Name="HeightImperialLabel" Grid.Column="1" HorizontalOptions="End" />
                             </Grid>
-                            <Slider x:Name="HeightImperial" Minimum="4" Value="5.5" Maximum="11.1" />
+                            <Slider x:Name="HeightImperial" Minimum="48" Value="66" Maximum="84" />
                             <Grid ColumnDefinitions="*,*">
                                 <Label Text="Weight" Grid.Column="0" />
                                 <Label Text="{Binding Source={x:Reference WeightImperial}, Path=Value, StringFormat='{0:F0} lbs'}" Grid.Column="1" HorizontalOptions="End" />
                             </Grid>
-                            <Slider x:Name="WeightImperial" Minimum="50" Value="100" Maximum="240" />
+                            <Slider x:Name="WeightImperial" Minimum="50" Value="100" Maximum="400" />
                         </VerticalStackLayout>
 
                         <!-- Metric: KG / (CM/100)^2 -->
