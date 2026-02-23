@@ -30,9 +30,9 @@
                         <VerticalStackLayout x:Name="ImperialUnits" IsVisible="False">
                             <Grid ColumnDefinitions="*,*">
                                 <Label Text="Height" Grid.Column="0" />
-                                <Label x:Name="HeightImperialLabel" Grid.Column="1" HorizontalOptions="End" />
+                                <Label x:Name="HeightImperialLabel" Text="5ft. 6in." Grid.Column="1" HorizontalOptions="End" />
                             </Grid>
-                            <Slider x:Name="HeightImperial" Minimum="48" Value="66" Maximum="84" />
+                            <Slider x:Name="HeightImperial" Minimum="48" Value="66" Maximum="84" ValueChanged="OnHeightImperialChanged" />
                             <Grid ColumnDefinitions="*,*">
                                 <Label Text="Weight" Grid.Column="0" />
                                 <Label Text="{Binding Source={x:Reference WeightImperial}, Path=Value, StringFormat='{0:F0} lbs'}" Grid.Column="1" HorizontalOptions="End" />

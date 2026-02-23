@@ -8,6 +8,13 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
+    public void OnHeightImperialChanged(object sender, ValueChangedEventArgs e)
+    {
+        int ft = (int)(e.NewValue / 12);
+        int inches = (int)(e.NewValue % 12);
+        HeightImperialLabel.Text = $"{ft}ft. {inches}in.";
+    }
+
     public void CalculateBMI(object sender, EventArgs e)
     {
         double BMI = 0;
@@ -25,11 +32,6 @@ public partial class MainPage : ContentPage
         {
             double heightImperial = HeightImperial.Value; // total inches
             double weightImperial = WeightImperial.Value;
-
-            int HeightImperialFt = (int)(heightImperial / 12);
-            int HeightImperialIn = (int)(heightImperial % 12);
-            HeightImperialLabel.Text = $"{HeightImperialFt}ft. {HeightImperialIn}in.";
-
             BMI = 703 * (weightImperial / Math.Pow(heightImperial, 2));
         }
         else if (units.Contains("Metric"))

@@ -1555,7 +1555,6 @@ C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\resizetizer\r\mipmap-hdpi\appicon_background.png
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\resizetizer\r\mipmap-mdpi\appicon_background.png
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\android\bin\packaged_resources
-C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\android\src\com\companyname\kbmi_calculator\R.java
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\_CompileJava.FileList.txt
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\android\compressed_assemblies.armeabi-v7a.ll
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\android\typemaps.armeabi-v7a.o
