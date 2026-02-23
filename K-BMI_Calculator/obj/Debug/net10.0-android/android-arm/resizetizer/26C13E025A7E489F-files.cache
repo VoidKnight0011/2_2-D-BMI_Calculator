@@ -1,9 +1,5 @@
-﻿obj\Debug\net10.0-android\android-arm\resizetizer\r\drawable\splash.gif
-obj\Debug\net10.0-android\android-arm\resizetizer\r\drawable-hdpi\dotnet_bot.png
-obj\Debug\net10.0-android\android-arm\resizetizer\r\drawable-mdpi\dotnet_bot.png
-obj\Debug\net10.0-android\android-arm\resizetizer\r\drawable-xhdpi\dotnet_bot.png
-obj\Debug\net10.0-android\android-arm\resizetizer\r\drawable-xxhdpi\dotnet_bot.png
-obj\Debug\net10.0-android\android-arm\resizetizer\r\drawable-xxxhdpi\dotnet_bot.png
+﻿obj\Debug\net10.0-android\android-arm\resizetizer\r\drawable\icon.png
+obj\Debug\net10.0-android\android-arm\resizetizer\r\drawable\splash.gif
 obj\Debug\net10.0-android\android-arm\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 obj\Debug\net10.0-android\android-arm\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
 obj\Debug\net10.0-android\android-arm\resizetizer\r\mipmap-hdpi\appicon.png

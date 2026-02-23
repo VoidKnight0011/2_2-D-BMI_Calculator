@@ -10,11 +10,6 @@ C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\mauifont.stamp
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\resizetizer\f\OpenSans-Regular.ttf
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\resizetizer\f\OpenSans-Semibold.ttf
-C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\resizetizer\r\drawable-xxxhdpi\dotnet_bot.png
-C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\resizetizer\r\drawable-xxhdpi\dotnet_bot.png
-C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\resizetizer\r\drawable-xhdpi\dotnet_bot.png
-C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\resizetizer\r\drawable-hdpi\dotnet_bot.png
-C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\resizetizer\r\drawable-mdpi\dotnet_bot.png
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\mauiimage.stamp
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\mauiimage.outputs
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\_AndroidResolvedResources.hash
@@ -1599,3 +1594,4 @@ C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\resizetizer\sp\values\maui_colors.xml
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\resizetizer\96F200E9268E21D3-files.cache
 C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\K-BMI_Calculator.sourcelink.json
+C:\Users\geose\RiderProjects\K-BMI_Calculator\K-BMI_Calculator\obj\Debug\net10.0-android\android-arm\resizetizer\r\drawable\icon.png

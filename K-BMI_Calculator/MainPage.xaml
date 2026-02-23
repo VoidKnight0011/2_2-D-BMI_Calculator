@@ -4,18 +4,20 @@
              x:Class="K_BMI_Calculator.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="25,0"
-            Spacing="25">
+        <VerticalStackLayout Padding="25,0" Spacing="25">
 
-            <VerticalStackLayout Spacing = "2">
-            	<Label Text="BMI Calculator" FontSize="Title" HorizontalOptions="Center" FontAttributes ="Bold" />
-            	<Label Text="Calculate Body Mass Index (BMI)" FontSize="Subtitle" HorizontalOptions="Center" />
-			</VerticalStackLayout>
+            <!-- Title -->
+            <VerticalStackLayout Margin="0,20,0,5" Spacing="2">
+                <Label Text="BMI Calculator" FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold" />
+                <Label Text="Calculate Body Mass Index (BMI)" FontSize="Subtitle" HorizontalOptions="Center" />
+            </VerticalStackLayout>
 
             <VerticalStackLayout Spacing="15">
+
+                <!-- Input Box -->
                 <Frame BackgroundColor="Gray" CornerRadius="5" Padding="5">
                     <VerticalStackLayout>
+
                         <Label Text="Units" />
                         <Picker x:Name="Units" SelectedIndexChanged="ChangeUnits" SelectedIndex="1">
                             <Picker.Items>
@@ -24,43 +26,65 @@
                             </Picker.Items>
                         </Picker>
 
-                        <!-- Imperial: 703 x [LBS/Inches^2] -->
+                        <!-- Imperial: 703 x [LBS / (Inches)^2] -->
                         <VerticalStackLayout x:Name="ImperialUnits" IsVisible="False">
-							<HorizontalStackLayout>
-                            	<Label Text="Height" HorizontalOptions="Start" />
-								<Label Text="{Binding Source={x:Reference HeightImperial}, Path=Value, StringFormat='{0:F1} ft'}" HorizontalOptions = "EndAndExpand" />
-							</HorizontalStackLayout>
-								<Slider x:Name="HeightImperial" Minimum="4" Value="5.5" Maximum ="11.1" />
-                            <HorizontalStackLayout>
-                            	<Label Text="Weight" HorizontalOptions="Start" />
-								<Label Text="{Binding Source={x:Reference WeightImperial}, Path=Value, StringFormat='{0:F0} lbs'}" HorizontalOptions="EndAndExpand" />
-							</HorizontalStackLayout>
-								<Slider x:Name="WeightImperial" Minimum = "50" Value="100" Maximum="240" />
+                            <Grid ColumnDefinitions="*,*">
+                                <Label Text="Height" Grid.Column="0" />
+                                <Label Text="{Binding Source={x:Reference HeightImperial}, Path=Value, StringFormat='{0:F1} ft'}" Grid.Column="1" HorizontalOptions="End" />
+                            </Grid>
+                            <Slider x:Name="HeightImperial" Minimum="4" Value="5.5" Maximum="11.1" />
+                            <Grid ColumnDefinitions="*,*">
+                                <Label Text="Weight" Grid.Column="0" />
+                                <Label Text="{Binding Source={x:Reference WeightImperial}, Path=Value, StringFormat='{0:F0} lbs'}" Grid.Column="1" HorizontalOptions="End" />
+                            </Grid>
+                            <Slider x:Name="WeightImperial" Minimum="50" Value="100" Maximum="240" />
                         </VerticalStackLayout>
 
-                        <!-- Metric: KG / (cm/100)^2 -->
+                        <!-- Metric: KG / (CM/100)^2 -->
                         <VerticalStackLayout x:Name="MetricUnits" IsVisible="True">
-                            <HorizontalStackLayout>
-                            	<Label Text="Height" HorizontalOptions="Start" />
-								<Label Text="{Binding Source={x:Reference HeightMetric}, Path=Value, StringFormat='{0:F0} cm'}" HorizontalOptions = "EndAndExpand" />
-							</HorizontalStackLayout>
-								<Slider x:Name="HeightMetric" Minimum = "50" Value = "170" Maximum = "250" />
-							<HorizontalStackLayout>
-                            	<Label Text="Weight" HorizontalOptions="Start" />
-								<Label Text="{Binding Source={x:Reference WeightMetric}, Path=Value, StringFormat='{0:F0} kg'}" HorizontalOptions = "EndAndExpand" />
-							</HorizontalStackLayout>
-								<Slider x:Name="WeightMetric" Minimum = "20" Value = "70" Maximum = "300" />
+                            <Grid ColumnDefinitions="*,*">
+                                <Label Text="Height" Grid.Column="0" />
+                                <Label Text="{Binding Source={x:Reference HeightMetric}, Path=Value, StringFormat='{0:F0} cm'}" Grid.Column="1" HorizontalOptions="End" />
+                            </Grid>
+                            <Slider x:Name="HeightMetric" Minimum="50" Value="170" Maximum="250" />
+                            <Grid ColumnDefinitions="*,*">
+                                <Label Text="Weight" Grid.Column="0" />
+                                <Label Text="{Binding Source={x:Reference WeightMetric}, Path=Value, StringFormat='{0:F0} kg'}" Grid.Column="1" HorizontalOptions="End" />
+                            </Grid>
+                            <Slider x:Name="WeightMetric" Minimum="20" Value="70" Maximum="300" />
                         </VerticalStackLayout>
 
+                        <Label x:Name="ErrorLabel" Text="Please select a unit first!" IsVisible="False" TextColor="Red" />
                         <Button Text="Calculate" Clicked="CalculateBMI" />
 
                     </VerticalStackLayout>
                 </Frame>
 
+                <!-- Results Box -->
+                <Frame BackgroundColor="Gray" CornerRadius="5" Padding="15" HorizontalOptions="Fill">
+                    <VerticalStackLayout>
 
+                        <!-- Pre-Results: shown before first calculation -->
+                        <VerticalStackLayout x:Name="PreResults" IsVisible="True" HorizontalOptions="Center">
+                            <Frame BackgroundColor="DarkGray" Padding="20" CornerRadius="10" HorizontalOptions="Center">
+                                <Image Source="icon.png" HeightRequest="60" />
+                            </Frame>
+                            <Label Text="Enter your details and press Calculate" HorizontalOptions="Center" Margin="0,10,0,0" />
+                        </VerticalStackLayout>
 
-                <Frame BackgroundColor="Gray" CornerRadius="5" Padding="5" HeightRequest = "150" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label x:Name="ResultLabel" Text="BMI Results Here!" />
+                        <!-- Results: shown after calculation -->
+                        <VerticalStackLayout x:Name="Results" IsVisible="False">
+                            <Frame BackgroundColor="DarkGray" Padding="10" CornerRadius="5" HorizontalOptions="Fill">
+                                <VerticalStackLayout>
+                                    <Label Text="Your BMI" HorizontalOptions="Center" />
+                                    <Label x:Name="BMIValueLabel" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" />
+                                    <Label x:Name="BMICategoryLabel" HorizontalOptions="Center" />
+                                </VerticalStackLayout>
+                            </Frame>
+                            <Label x:Name="BMIDescriptionLabel" Margin="0,10,0,0" />
+                        </VerticalStackLayout>
+
+                    </VerticalStackLayout>
                 </Frame>
 
             </VerticalStackLayout>
